@@ -1,4 +1,4 @@
-package com.fdmgroup.service;
+package com.fdmgroup.bankApi.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
@@ -19,7 +19,6 @@ import com.fdmgroup.bankApi.model.Customer;
 import com.fdmgroup.bankApi.model.Person;
 import com.fdmgroup.bankApi.model.SavingsAccount;
 import com.fdmgroup.bankApi.repository.AccountRepository;
-import com.fdmgroup.bankApi.service.AccountService;
 
 class AccountServiceTest {
 

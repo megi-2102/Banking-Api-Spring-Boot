@@ -1,4 +1,4 @@
-package com.fdmgroup.service;
+package com.fdmgroup.bankApi.service;
 
 import static org.mockito.ArgumentMatchers.any; 
 import static org.mockito.Mockito.*;
@@ -18,7 +18,6 @@ import com.fdmgroup.bankApi.model.Company;
 import com.fdmgroup.bankApi.model.Customer;
 import com.fdmgroup.bankApi.model.Person;
 import com.fdmgroup.bankApi.repository.CustomerRepository;
-import com.fdmgroup.bankApi.service.CustomerService;
 
 class CustomerServiceTest {
 
