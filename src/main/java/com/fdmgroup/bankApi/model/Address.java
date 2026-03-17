@@ -1,6 +1,8 @@
 package com.fdmgroup.bankApi.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 //Address entity represents an address of a customer in the banking system.
 //This class is mapped to the ADDRESS table in the database using JPA .
@@ -21,6 +23,11 @@ public class Address {
 	
 	// Postal code of the customer's address (cannot be null).
 	@Column(name = "POSTAL_CODE", nullable = false)
+    @NotBlank(message = "Postal code is required.")
+    @Pattern(
+        regexp = "^[A-Za-z]\\d[A-Za-z][ -]?\\d[A-Za-z]\\d$",
+        message = "Postal code must be in a valid format, for example T3R 3E3."
+    )
 	private String postalCode;
 	
 	// City where the customer lives (cannot be null).

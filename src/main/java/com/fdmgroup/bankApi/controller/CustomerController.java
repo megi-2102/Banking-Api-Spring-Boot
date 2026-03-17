@@ -15,9 +15,11 @@ import com.fdmgroup.bankApi.service.CustomerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 
 // REST controller responsible for handling all customer-related API requests
 // Base URL: /api/customers
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {
@@ -47,7 +49,7 @@ public class CustomerController {
     	    )
     	})
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody Customer customer) {
+    public ResponseEntity<Void> create(@Valid @RequestBody Customer customer) {
     	// Delegate creation logic to the service layer
     	Customer createdCustomer = service.create(customer);
     	
@@ -150,7 +152,7 @@ public class CustomerController {
     	    )
     	})
     @PutMapping("/{id}")
-    public ResponseEntity<Customer> update(@PathVariable long id, @RequestBody Customer updated) {
+    public ResponseEntity<Customer> update(@PathVariable long id, @Valid @RequestBody Customer updated) {
     	// Retrieve existing customer
     	Customer existing = service.findById(id);
     	

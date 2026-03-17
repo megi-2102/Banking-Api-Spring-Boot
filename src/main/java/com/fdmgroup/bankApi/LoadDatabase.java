@@ -23,8 +23,8 @@ public class LoadDatabase {
         return args -> {
         	
             // Sample addresses
-        	Address address1 = new Address("13 KENWORTH STREET", "T3R 3E3", "Toronto", "Ontario");
-        	Address address2 = new Address("2 QUEEN STREET", "R43 6Y6", "Caledon", "Ontario");
+        	Address address1 = new Address("13 Kenworth Street", "T3R 3E3", "Toronto", "Ontario");
+        	Address address2 = new Address("2 Queen Street", "R43 6Y6", "Caledon", "Ontario");
         	
             // Sample customers
             Customer customer1 = new Company("FDM", address1);

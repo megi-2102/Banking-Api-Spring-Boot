@@ -23,6 +23,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 // REST controller responsible for handling all Account-related API requests.
 // Base URL: /api/accounts
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/accounts")
 public class AccountController {

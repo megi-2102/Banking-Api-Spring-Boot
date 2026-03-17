@@ -17,6 +17,6 @@ public interface AccountRepository extends JpaRepository<Account, Long>{
 	
     // Custom query to find all accounts whose customer's address matches a given city
     // :city is a named parameter that will be bound at runtime
-	@Query("SELECT a FROM Account a WHERE a.customer.address.city = :city")
+	@Query("SELECT a FROM Account a WHERE LOWER(a.customer.address.city) = Lower(:city)")
         List<Account> findAccountsByCustomerCity(@Param("city")String city);
 }
