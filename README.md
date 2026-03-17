@@ -40,20 +40,20 @@ It supports full CRUD operations, implements clean architecture principles, and 
 ---
 
 ### 🔐 Validation & Exception Handling
-- Input validation using **Jakarta Validation**  
+- Input validation using Jakarta Validation 
 - Custom exception handling for API errors  
 
 ---
 
 ### 📄 API Documentation
-- Integrated **Swagger/OpenAPI** for API documentation and testing  
+- Integrated Swagger/OpenAPI for API documentation and testing  
 
 ---
 
 ### 🧪 Testing
 - Unit and integration tests  
 - API endpoint testing  
-- Achieves **high / full test coverage**  
+- Achieves high / full test coverage
 
 ---
 
